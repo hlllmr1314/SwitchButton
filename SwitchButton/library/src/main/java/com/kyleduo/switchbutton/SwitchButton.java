@@ -620,6 +620,11 @@ public class SwitchButton extends CompoundButton {
      */
     protected void animateToState(boolean checked) {
         if (mProcessAnimator == null || !museAnim) {
+            if (checked) {
+                mProcessAnimator.setFloatValues(mProcess, 1f);
+            } else {
+                mProcessAnimator.setFloatValues(mProcess, 0);
+            }
             return;
         }
         if (mProcessAnimator.isRunning()) {
