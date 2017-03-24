@@ -569,7 +569,10 @@ public class SwitchButton extends CompoundButton {
                         playSoundEffect(SoundEffectConstants.CLICK);
                         setChecked(nextStatus);
                     } else {
+                        boolean flag = museAnim;
+                        museAnim = true;
                         animateToState(nextStatus);
+                        museAnim = flag;
                     }
                 }
                 break;
