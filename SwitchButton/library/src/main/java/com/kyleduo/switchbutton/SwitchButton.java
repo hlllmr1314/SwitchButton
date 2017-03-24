@@ -616,7 +616,7 @@ public class SwitchButton extends CompoundButton {
      * @param checked checked or unChecked
      */
     protected void animateToState(boolean checked) {
-        if (mProcessAnimator == null) {
+        if (mProcessAnimator == null || !museAnim) {
             return;
         }
         if (mProcessAnimator.isRunning()) {
